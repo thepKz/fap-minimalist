@@ -38,14 +38,51 @@ Extension Chrome (Manifest V3) giao diện tối giản / industrial cho [FPT Ac
 - **Preview tĩnh**: `preview/student-preview.html` (Bootstrap 3 + `fap-minimal.css`). Có thể thêm match localhost trong `manifest.json` để test.
 - Content script **không** chạy trên mọi origin nếu không khớp `matches` — trên FAP thật cần extension đã load.
 
-## Cài đặt (unpacked)
+## Cài đặt miễn phí (không qua Chrome Web Store)
 
-1. Mở `chrome://extensions` (Edge: `edge://extensions`).
-2. Bật **Developer mode**.
-3. **Load unpacked** → chọn thư mục `fap-minimal-extension`.
-4. Mở `https://fap.fpt.edu.vn/...` sau khi đăng nhập; bật theme từ icon extension.
+Cách này **không tốn phí**: tải code từ GitHub rồi bật chế độ nhà phát triển trên trình duyệt.
 
-Nếu popup báo không gửi được tin nhắn tới tab: đang ở tab `fap.fpt.edu.vn`, rồi bật lại công tắc.
+### Cách 1: Tải ZIP trên GitHub (nhanh nhất)
+
+1. Vào repo: [github.com/thepKz/fap-minimalist](https://github.com/thepKz/fap-minimalist).
+2. Bấm nút **Code** → **Download ZIP**.
+3. Giải nén. Bạn sẽ có thư mục kiểu `fap-minimalist-main` (tên có thể khác tùy branch).
+4. Bên trong là thư mục **`fap-minimal-extension`** — đó là thư mục phải chọn khi cài (trong đó có file `manifest.json` ngay tại gốc).
+
+### Cách 2: Clone bằng Git
+
+```bash
+git clone https://github.com/thepKz/fap-minimalist.git
+cd fap-minimalist/fap-minimal-extension
+```
+
+Giữ nguyên thư mục `fap-minimal-extension`; không cần `npm install` hay build gì thêm.
+
+### Gắn extension vào Chrome / Chromium
+
+1. Mở `chrome://extensions`.
+2. Bật **Developer mode** (góc phải).
+3. **Load unpacked** → chọn thư mục **`fap-minimal-extension`** (phải thấy `manifest.json` ngay trong thư mục đó).
+4. Mở [FAP](https://fap.fpt.edu.vn), đăng nhập, bấm icon extension và **bật theme**.
+
+### Microsoft Edge
+
+1. Mở `edge://extensions`.
+2. Bật **Developer mode** (cạnh dưới bên trái hoặc trong menu tùy phiên bản).
+3. **Load unpacked** → chọn lại thư mục **`fap-minimal-extension`**.
+
+### Gặp lỗi thường gặp
+
+| Hiện tượng | Cách xử lý |
+|------------|------------|
+| “Manifest file is missing or unreadable” | Bạn đang chọn nhầm thư mục cha; phải chọn thư mục **có `manifest.json`**. |
+| Popup không bật được theme | Đang mở tab `fap.fpt.edu.vn`, thử tắt/bật lại công tắc trong popup. |
+| Cập nhật bản mới | **Download ZIP** lại và **Load unpacked** trỏ vào thư mục mới, *hoặc* trên `chrome://extensions` bấm **Reload** (mũi tên tròn) sau khi thay file. |
+
+### Cập nhật sau này
+
+- **ZIP**: tải lại từ GitHub, giải nén đè hoặc vào `chrome://extensions` → **Reload** extension.
+- **Git**: `git pull` trong repo, rồi **Reload** extension.
 
 ## Cấu trúc thư mục
 

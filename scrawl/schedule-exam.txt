@@ -1,0 +1,206 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><title>
+	FPT University Academic Portal
+</title><link rel="Stylesheet" href="../fu.css" type="text/css"><link rel="Stylesheet" href="../JavaScript/jquery.css" type="text/css"><link rel="Stylesheet" href="../JavaScript/jquery-ui.css" type="text/css"><link rel="Stylesheet" href="../JavaScript/jquery.alerts.css" type="text/css">
+    
+    
+    
+
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="../JavaScript/jquery_002.js" type="text/javascript"></script>
+
+    <script src="../JavaScript/jquery_003.js" type="text/javascript"></script>
+
+    <script src="../JavaScript/jquery.js" type="text/javascript"></script>
+
+    <script src="../JavaScript/jquery-1.8.3.js" type="text/javascript"></script>
+    
+
+    <script src="../JavaScript/jquery-ui.js" type="text/javascript"></script>
+
+    <script src="../JavaScript/jquery.alerts.js" type="text/javascript"></script>
+    
+    <link rel="Stylesheet" href="../Content/bootstrap.css" type="text/css"><link rel="Stylesheet" href="../Content/bootstrap.min.css" type="text/css"><link rel="Stylesheet" href="../Content/bootstrap-theme.min.css" type="text/css">
+
+    <style type="text/css">
+        .style1 {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body class="fap-minimal-skin">
+    <div class="container">
+
+        <div class="row fap-skin-reveal fap-skin-reveal--visible" style="--fap-reveal-index: 0;">
+            
+            <div class="col-md-6">
+
+                <h1><span>FPT University Academic Portal</span>
+                </h1>
+
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <table>
+                        <tbody><tr>
+                          
+
+                            <td colspan="2" class="auto-style1"><strong>FAP mobile app (myFAP) is ready at</strong></td>
+                            <td class="auto-style1;">Hỗ trợ kỹ thuật FAP</td>
+                        </tr>
+                        <tr>
+                         
+                            <td><a href="https://apps.apple.com/app/id1527723314">
+                                <img src="https://fap.fpt.edu.vn/images/app-store.png" style="width: 120px; height: 40px" alt="apple store"></a></td>
+                            <td><a href="https://play.google.com/store/apps/details?id=com.fuct">
+                                <img src="https://fap.fpt.edu.vn/images/play-store.png" style="width: 120px; height: 40px" alt="google store"></a></td>
+                            <td><img src="images/qrcodeFU.jpg" style="text-align: right"></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <form name="aspnetForm" method="post" action="./ScheduleExams.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ou4XvL+or8qEmmITjJ8c8DtuEce9ClbEMZkg+iQ75IXo3hE3Lfe0B4kZGECGtF3GWf/lQ7UGGKWWtuyQ9cjXh6GbamU6C6GqxgpfH3VRT3sh9ZXHpqzl2uZVVCg2fPp7yXvhFM8kJLuAUZMNuelk6PphvbxghYPNpxYzbPhw/Pvny1NFc7sKOy/kJbZk9QVKJ5IiPQ4tfSkwZWnD1GfgHTelspEHHl62AaWROnRl72Zlsj5edj0fKCLfHzsn6WKeynj8YCUUa/KzkPtURp5rg2MYeYXHCn7V0InPeHPnTX5V3C8hzhyqPild1eLWg+7J8YkxkwmW37LGL3Gnf2OVmI1u63JN2ODcUrzVfk1sAWWW1tTrCGDGNG4g3JL4wT3ouvpzzFo8Y0OLu1cBg7UjXSTcuVlSm+emgq+XoU0m2mwILyzRSWALe/09oBl6Mm25ELVJJQ5YLRMCKOAbQmjtL+0GfVNWSFCeHVukB1Hbq5qouhXCtFuxdcfdOKXe2KdtB7MNW0bWa1MTR4XJheq+6rYMOp1Zq4+2+cVPrxgkpWyXyCVz38yOwHCkZ1I7Z7cvlQ9S/AOAZASw0gaAPnf1aYreyy80jUgMVLgqemvK52mkQY0KHiwE5aaKbwZWAcY7hrVWRO27pmjxbKqml3GjmEyVM2wJJ8XjAnCPF4fYSmrb3KQoRfFSyidaoHn6/bOLACsx5o3v9IpLm99Zkl0eOB4gQA2OWyGDtqSMfaXHztKvjAQ4nOQhDx6XzycUUUw6cKRVOF54Mt4q3iibebXeDJj4I5KW0xhciXGhU4nskEBeCCbvmt8LisK2jvIveXRVUOTILsJth+AO8RUqogwbet6kcaDQjmE/C1XCR/oAgbnRnHb22amU7WsHxHKrVY9hojv5wvnlFQjsa5ODaV+7KtuffC73gkbzxOPuEUWGJcLc8odwhqjUxqKsukSnO2dFfh5JWygyRE2EMkJ0XUnEoThYIHPT8yXmUqSyBNxwgu4HpuXw2xxIiLBx0diMTFIOupHvLEhC2TVpNntFRmqNRUm3uyXRzYPv4jYFUnvrZCNHPApC/OOIvaI1ZwHmkZv7bfAx6iGv7Fw287Y9X4djfhmpuAcPx5tvxpQVFTdl7p2elcCcZx39ggNsBdngC42p7N37olX5+QgRhJAqTVZZBmV6FxJtn8v3EYC3aH5s1hbV/Y/ny/ngY5LuN9Z8svRP9DJkYssDMupsxSl4F5dFDZQ0dyynuLuuPS+oL/1h7IlLMzsIJTCwxys1E+YPPWF8bA4MF2jWLB6ATjr06Qd1I/Qe2Fp6FwVHK59uWv1tzCpPa64BgNXimDBW47VzPkiO5TrmzvIQ1TBFFiFF2ySYFlDgSuGMENSvnXZrHuwJx1XynA6/RIYHQmBnQ+Z2dzCup4SJD0/DswrTvq3ceeBOpA+84FWaevUT/Ufhy19+9GywFwsOVt5YhFW03BHrIe/LOBuLfA2Xg9n3yfhv//VGE5fDVXF2Sh/E+bhcCustSfiz3zDknyVJ2T0JegTZS1vnKVXall49hlm4JQfChAIOdrZUm3qSlOG8ifqNwtWA/FKumuVx6H1tmrIhaRd+yZauWeTVeaL/cdzAZ9cKlC0gpqkn/P/IGfkJH59w1e1R6wiAzcNT6x10CSOSdAHxlPsnRtTs38TFWGnfCCSQo3kfEGeTB1f3Qlz3CTfb2TQG4TXYczzGRPDSL7+6JeGl02AfRYzUBu7dBxM96T7KPXa0+CAPKMxFFc0tbczQLk3dLUPTQvYJZ4/I7yx60OKAFRWbuqqJfOEerAw52PEwNNX2dA==">
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="30A70CBA">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/owJeaqse5biKIKQMjw2G5JBvD6G2wVaAWHDLP24ImRJGHu5D+0sF2Ni7WrCzHH0fBjahIQTrdyJ3slShbH1K6GoHm3sKtBIamV7I6xjzHdBsbp2gBWM3BppPcsbyUVV">
+</div>
+                    <div id="ctl00_divUser" style="float: right; margin-right: 16px;">
+                        <a href="?view=user">
+                            <span id="ctl00_lblLogIn" class="label label-success">demo_user</span></a> | <a href="?logout=true" class="label label-success">logout</a> |
+                <span id="ctl00_lblCampusName" class="label label-success"> CAMPUS: FPTU-Hồ Chí Minh</span>
+                    </div>
+
+                    <div style="position: absolute; top: -35px; right: 30px; width: 150px;">
+                        
+                    </div>
+                    <ol class="breadcrumb">
+                        <li>
+                            <span id="ctl00_lblNavigation"><a href="../Student.aspx">Home</a>&nbsp;|&nbsp;<b>Schedule Exam</b></span></li>
+                    </ol>
+                    <table>
+                        <tbody><tr style="border-bottom: 0 none">
+                            <td>
+                                <div>
+                                    
+    <h3>Exam Schedules </h3><br>
+
+    <div id="ctl00_mainContent_divContent"><table><thead><tr> <th width="10px">No</th> <th width="70px">SubjectCode</th> <th width="250px">Subject Name</th> <th width="100px">Date</th> <th width="50px">Room No</th> <th width="100px">Time</th> <th width="200px">Exam Form</th> <th width="100px">Exam</th> <th width="100px">Date of publication</th> <th width="100px">...</th>  </tr></thead><tbody><tr><td width="10px">1</td><td width="70px">MLN131</td><td width="250px">Scientific socialism</td><td width="100px">31/03/2026</td><td width="50px">225</td><td width="100px">10h50-12h20</td><td width="20px">Multiple_choices</td><td width="20px">FE</td><td width="100px">09/04/2026</td><td width="100px"></td></tr><tr><td width="10px">2</td><td width="70px">MLN131</td><td width="250px">Scientific socialism</td><td width="100px">11/04/2026</td><td width="50px"></td><td width="100px">10h50-12h20</td><td width="20px">Multiple_choices</td><td width="20px">2NDFE</td><td width="100px">14/04/2026</td><td width="100px"></td></tr></tbody></table></div>
+
+    <input type="hidden" name="ctl00$mainContent$hdException" id="ctl00_mainContent_hdException">
+
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 0 none">
+                            <td>
+                                <br>
+
+                                <table width="100%" style="border: 1px solid transparent;" id="cssTable">
+
+                                    <tbody><tr>
+                                        <td>
+                                            
+
+                                            <div id="ctl00_divSupporthcm">
+                                                <br>
+                                                Sinh viên có nhu cầu thực hiện các thủ tục, dịch vụ vui lòng liên hệ Trung tâm Dịch vụ Sinh viên tại Phòng 202, điện thoại : <strong>028.73005585</strong>  , <strong>email: sschcm@fe.edu.vn</strong>
+                                                <br>
+                                            </div>
+                                            
+                                            
+                                            
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="text-align: center">
+                                                © Powered by <a href="http://fpt.edu.vn" target="_blank">FPT University</a>&nbsp;|&nbsp;
+        <a href="http://cms.fpt.edu.vn/" target="_blank">CMS</a>&nbsp;|&nbsp; <a href="http://library.fpt.edu.vn" target="_blank">library</a>&nbsp;|&nbsp; <a href="http://library.books24x7.com" target="_blank">books24x7</a>
+                                                <span id="ctl00_lblHelpdesk"></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-10421012-13']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <script type="text/javascript">
+        var isClose = false;
+
+        //this code will handle the F5 or Ctrl+F5 key
+        //need to handle more cases like ctrl+R whose codes are not listed here
+        document.onkeydown = checkKeycode;
+        function checkKeycode(e) {
+            var keycode;
+            if (window.event)
+                keycode = window.event.keyCode;
+            else if (e)
+                keycode = e.which;
+            if (keycode == 116) {
+                isClose = true;
+            }
+        }
+        function somefunction() {
+            isClose = true;
+        }
+
+        //<![CDATA[
+
+        function bodyUnload() {
+
+            if (!isClose) {
+                var request = GetRequest();
+                request.open("GET", "LogOut.aspx", true);
+                request.send();
+            }
+        }
+        function GetRequest() {
+            var request = null;
+            if (window.XMLHttpRequest) {
+                //incase of IE7,FF, Opera and Safari browser
+                request = new XMLHttpRequest();
+            }
+            else {
+                //for old browser like IE 6.x and IE 5.x
+                request = new ActiveXObject('MSXML2.XMLHTTP.3.0');
+            }
+            return request;
+        }
+        //]]>
+    </script>
+
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;56c6dd7e4ecf4947aa540f48289e45af&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>

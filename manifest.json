@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "FAP Minimal Skin",
+  "version": "1.17.4",
+  "description": "Warm minimal theme for FPT Academic Portal (fap.fpt.edu.vn).",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "FAP Minimal Skin",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://fap.fpt.edu.vn/*",
+        "http://127.0.0.1/*/preview/student-preview.html",
+        "http://127.0.0.1/*/student-preview.html",
+        "http://localhost/*/preview/student-preview.html",
+        "http://localhost/*/student-preview.html"
+      ],
+      "run_at": "document_idle",
+      "css": ["styles/fap-minimal.css"],
+      "js": ["scripts/content.js", "scripts/transcript-gpa.js"]
+    }
+  ]
+}

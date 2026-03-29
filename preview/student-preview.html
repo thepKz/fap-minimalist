@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAP Minimal Skin – Preview (Student + lịch tuần)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/fap-minimal.css" />
+  </head>
+  <body class="fap-minimal-skin">
+    <div id="fap-link-hint" role="status" aria-hidden="true">
+      <span class="fap-link-hint-kbd" aria-hidden="true">Đích</span><span class="fap-link-hint-url"></span>
+    </div>
+
+    <!-- Giống FAP: .container là con trực tiếp của body, form nằm trong container (không bọc ngược). -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>FPT University Academic Portal</h1>
+        </div>
+        <div class="col-md-5">
+          <div id="ctl00_divUser">
+            thepmtse181568 | <a href="#">logout</a> | CAMPUS: FPTU-Hồ Chí Minh
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <form id="aspnetForm" action="#" method="post">
+          <section id="fap-quick-strip" class="fap-quick-strip fap-skin-reveal fap-skin-reveal--visible" aria-label="Lối tắt thường dùng">
+            <header class="fap-quick-strip-head">
+              <h2 class="fap-quick-strip-title">Lối tắt thường dùng</h2>
+              <p class="fap-quick-strip-sub">Kênh ưu tiên: chuyển lớp, điểm, khung chương trình.</p>
+            </header>
+            <nav class="fap-quick-strip-featured" aria-label="Lối tắt ưu tiên">
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Báo cáo điểm danh</a>
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Báo cáo điểm theo kỳ</a>
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Báo cáo điểm toàn khóa</a>
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Chuyển lớp / Tạm ngưng môn</a>
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Thời khóa biểu từng tuần</a>
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Xem lịch thi</a>
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Khung chương trình</a>
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Gửi đơn</a>
+              <a class="fap-quick-chip fap-quick-chip--priority" href="#">Xem đơn</a>
+            </nav>
+            <p class="fap-quick-strip-more-label">Khác</p>
+            <nav class="fap-quick-strip-nav fap-quick-strip-nav--more" aria-label="Lối tắt khác">
+              <a class="fap-quick-chip fap-quick-chip--compact" href="#">Lịch học</a>
+              <a class="fap-quick-chip fap-quick-chip--compact" href="#">Hồ sơ sinh viên</a>
+              <a class="fap-quick-chip fap-quick-chip--compact" href="#">Đổi mật khẩu FEID</a>
+              <a class="fap-quick-chip fap-quick-chip--compact" href="#">Lịch sử giao dịch</a>
+              <a class="fap-quick-chip fap-quick-chip--compact" href="#">Góp ý giảng dạy</a>
+              <a class="fap-quick-chip fap-quick-chip--compact" href="#">Trang chủ sinh viên</a>
+            </nav>
+          </section>
+
+          <div id="ctl00_mainContent_divMain" class="col-xs-12">
+          <div class="box topAthletes fap-skin-reveal fap-skin-reveal--visible">
+            <h3 class="orangeTitle">Tin tức</h3>
+            <div class="listBoxWrapper">
+              <p style="margin: 0; color: var(--fap-muted); font-size: 14px">
+                Khu vực tin tức trên trang thật do FAP tải động. Preview chỉ giữ khối tiêu đề để khớp bố cục.
+              </p>
+            </div>
+          </div>
+
+          <div class="box fap-acad-section fap-skin-reveal fap-skin-reveal--visible" data-fap-mosaic="1">
+            <h3 class="orangeTitle">Thông tin học tập</h3>
+            <div class="listBoxWrapper">
+              <div id="fap-acad-toolbar" class="fap-acad-toolbar">
+                <p class="fap-acad-toolbar-lead">Lọc theo chữ hoặc thu gọn từng nhóm.</p>
+                <div class="fap-acad-toolbar-row">
+                  <label class="fap-acad-sr-only" for="fap-acad-filter">Lọc liên kết</label>
+                  <input
+                    type="search"
+                    id="fap-acad-filter"
+                    class="fap-acad-filter"
+                    autocomplete="off"
+                    placeholder="Từ khóa (lịch, điểm, học phí…)"
+                  />
+                  <button type="button" class="fap-acad-btn" id="fap-acad-expand-all">Mở rộng tất cả</button>
+                  <button type="button" class="fap-acad-btn fap-acad-btn--ghost" id="fap-acad-collapse-all">
+                    Thu gọn tất cả
+                  </button>
+                </div>
+              </div>
+
+              <table style="width: 100%; border: none">
+                <tbody>
+                  <tr>
+                    <td>
+                      <table class="fap-acad-mosaic">
+                        <tbody>
+                          <tr>
+                            <td class="fap-dash-tile fap-dash-span-a fap-skin-reveal fap-skin-reveal--visible">
+                              <div class="fap-dash-tile-shell">
+                                <div class="fap-dash-title-row">
+                                  <h4 class="fap-dash-title">Thủ tục/đơn từ</h4>
+                                  <div class="fap-dash-title-actions">
+                                    <span class="fap-dash-meta">19 mục</span>
+                                    <button type="button" class="fap-dash-toggle" aria-expanded="true">Thu gọn</button>
+                                  </div>
+                                </div>
+                                <ul>
+                                  <li class="fap-dash-li">
+                                    <a href="#">Xin tạm hoãn tiến độ một học kỳ để học lại · Hủy bỏ việc xin tạm hoãn</a>
+                                  </li>
+                                  <li class="fap-dash-li">
+                                    <a href="#">Xin tạm nghỉ một học kỳ · Hủy bỏ việc xin tạm nghỉ</a>
+                                  </li>
+                                  <li class="fap-dash-li"><a href="#">Xin chuyển lớp/Tạm ngưng môn</a></li>
+                                  <li class="fap-dash-li"><a href="#">Đăng ký học môn học tại nước ngoài</a></li>
+                                  <li class="fap-dash-li"><a href="#">Đăng ký môn học đi chậm kỳ</a></li>
+                                  <li class="fap-dash-li"><a href="#">Đăng ký học cải thiện điểm</a></li>
+                                  <li class="fap-dash-li"><a href="#">Đăng ký học lại</a></li>
+                                  <li class="fap-dash-li"><a href="#">Hủy đăng ký học</a></li>
+                                  <li class="fap-dash-li"><a href="#">Đăng ký môn tự chọn</a></li>
+                                  <li class="fap-dash-li">
+                                    <a href="#">Gửi đơn · Xem đơn</a>
+                                  </li>
+                                  <li class="fap-dash-li"><a href="#">Xin xác nhận sinh viên</a></li>
+                                  <li class="fap-dash-li">
+                                    <a href="#">Lựa chọn các khoản nộp – Thanh toán</a>
+                                  </li>
+                                  <li class="fap-dash-li"><a href="#">Yêu cầu đổi chéo lớp với sinh viên</a></li>
+                                  <li class="fap-dash-li"><a href="#">Sinh viên điểm danh bằng mã được cấp</a></li>
+                                  <li class="fap-dash-li">
+                                    <a href="#">Danh sách các môn học chờ lớp · Đăng ký</a>
+                                  </li>
+                                  <li class="fap-dash-li"><a href="#">Đề nghị hỗ trợ kinh phí khởi nghiệp</a></li>
+                                  <li class="fap-dash-li"><a href="#">Đăng ký học vượt kỳ</a></li>
+                                  <li class="fap-dash-li"><a href="#">Đăng ký học phụ đạo</a></li>
+                                  <li class="fap-dash-li"><a href="#">Đăng ký bảo hiểm y tế</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                            <td class="fap-dash-tile fap-dash-span-b fap-skin-reveal fap-skin-reveal--visible">
+                              <div class="fap-dash-tile-shell">
+                                <div class="fap-dash-title-row">
+                                  <h4 class="fap-dash-title">Tra cứu thông tin</h4>
+                                  <div class="fap-dash-title-actions">
+                                    <span class="fap-dash-meta">9 mục</span>
+                                    <button type="button" class="fap-dash-toggle" aria-expanded="true">Thu gọn</button>
+                                  </div>
+                                </div>
+                                <ul>
+                                  <li class="fap-dash-li"><a href="#">Lịch học</a></li>
+                                  <li class="fap-dash-li"><a href="#">Biểu học phí</a></li>
+                                  <li class="fap-dash-li"><a href="#">Thời khóa biểu từng tuần</a></li>
+                                  <li class="fap-dash-li"><a href="#">Xem lịch thi</a></li>
+                                  <li class="fap-dash-li"><a href="#">Xem đề cương môn học</a></li>
+                                  <li class="fap-dash-li"><a href="#">EduNext student guideline</a></li>
+                                  <li class="fap-dash-li"><a href="#">Hỗ trợ</a></li>
+                                  <li class="fap-dash-li"><a href="#">Thông báo kết quả OJT | xét khóa luận tốt nghiệp</a></li>
+                                  <li class="fap-dash-li"><a href="#">Nâng cấp phần mềm SAFE EXAM BROWSER (SEB)</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fap-dash-tile fap-dash-span-a fap-skin-reveal fap-skin-reveal--visible">
+                              <div class="fap-dash-tile-shell">
+                                <div class="fap-dash-title-row">
+                                  <h4 class="fap-dash-title">Ý kiến</h4>
+                                  <div class="fap-dash-title-actions">
+                                    <span class="fap-dash-meta">1 mục</span>
+                                    <button type="button" class="fap-dash-toggle" aria-expanded="true">Thu gọn</button>
+                                  </div>
+                                </div>
+                                <ul>
+                                  <li class="fap-dash-li"><a href="#">Ý kiến về việc giảng dạy</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                            <td class="fap-dash-tile fap-dash-span-b fap-skin-reveal fap-skin-reveal--visible">
+                              <div class="fap-dash-tile-shell">
+                                <div class="fap-dash-title-row">
+                                  <h4 class="fap-dash-title">Báo cáo</h4>
+                                  <div class="fap-dash-title-actions">
+                                    <span class="fap-dash-meta">5 mục</span>
+                                    <button type="button" class="fap-dash-toggle" aria-expanded="true">Thu gọn</button>
+                                  </div>
+                                </div>
+                                <ul>
+                                  <li class="fap-dash-li"><a href="#">Báo cáo điểm danh</a></li>
+                                  <li class="fap-dash-li"><a href="#">Báo cáo điểm</a></li>
+                                  <li class="fap-dash-li"><a href="#">Báo cáo điểm</a></li>
+                                  <li class="fap-dash-li"><a href="#">Khung chương trình</a></li>
+                                  <li class="fap-dash-li"><a href="#">Lịch sử giao dịch</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fap-dash-tile fap-dash-span-a fap-skin-reveal fap-skin-reveal--visible">
+                              <div class="fap-dash-tile-shell">
+                                <div class="fap-dash-title-row">
+                                  <h4 class="fap-dash-title">Khác</h4>
+                                  <div class="fap-dash-title-actions">
+                                    <span class="fap-dash-meta">6 mục</span>
+                                    <button type="button" class="fap-dash-toggle" aria-expanded="true">Thu gọn</button>
+                                  </div>
+                                </div>
+                                <ul>
+                                  <li class="fap-dash-li">
+                                    <a href="#">Student Profile | Update Profile | Đồng ý cung cấp thông tin cho phụ huynh</a>
+                                  </li>
+                                  <li class="fap-dash-li"><a href="#">Xem thông tin về học kỳ, phòng</a></li>
+                                  <li class="fap-dash-li"><a href="#">Các loại chứng chỉ</a></li>
+                                  <li class="fap-dash-li"><a href="#">Report điểm phong trào</a></li>
+                                  <li class="fap-dash-li"><a href="#">How to access Wiley eBook on VitalSource platform</a></li>
+                                  <li class="fap-dash-li"><a href="#">Change password FEID</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                            <td class="fap-dash-tile fap-dash-span-b fap-skin-reveal fap-skin-reveal--visible">
+                              <div class="fap-dash-tile-shell">
+                                <div class="fap-dash-title-row">
+                                  <h4 class="fap-dash-title">Các quy định</h4>
+                                  <div class="fap-dash-title-actions">
+                                    <span class="fap-dash-meta">11 mục</span>
+                                    <button type="button" class="fap-dash-toggle" aria-expanded="true">Thu gọn</button>
+                                  </div>
+                                </div>
+                                <ul>
+                                  <li class="fap-dash-li"><a href="#">Regulations...</a></li>
+                                  <li class="fap-dash-li"><a href="#">Nội quy KTX Hà Nội</a></li>
+                                  <li class="fap-dash-li"><a href="#">Nội quy KTX Cần Thơ</a></li>
+                                  <li class="fap-dash-li"><a href="#">Nội quy Đà Nẵng</a></li>
+                                  <li class="fap-dash-li"><a href="#">Courses on FPTU-Coursera</a></li>
+                                  <li class="fap-dash-li"><a href="#">Announcement</a></li>
+                                  <li class="fap-dash-li"><a href="#">Ask mentor</a></li>
+                                  <li class="fap-dash-li"><a href="#">View answer</a></li>
+                                  <li class="fap-dash-li"><a href="#">Submit certificates</a></li>
+                                  <li class="fap-dash-li"><a href="#">Certificate submission guideline</a></li>
+                                  <li class="fap-dash-li"><a href="#">Sử dụng Coursera trên CHATGPT</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="box fap-preview-schedule-box fap-skin-reveal fap-skin-reveal--visible">
+            <h3 class="orangeTitle">Thời khóa biểu tuần (preview)</h3>
+            <ol class="breadcrumb">
+              <li><span><a href="#">Home</a>&nbsp;|&nbsp;<b>View Schedule</b> (preview tĩnh)</span></li>
+            </ol>
+            <h2 style="margin-top: 0">Activities for <span>ThepMTSE181568 (Mai Tấn Thép)</span></h2>
+            <p style="color: var(--fap-muted); font-size: 14px">
+              Bảng dưới mô phỏng DOM sau <code>content.js</code> (Chronos): nền sáng, cột đầu sticky, lưới cố định
+              độ rộng. Trên trang thật chỉ chạy tại <code>ScheduleOfWeek.aspx</code>.
+            </p>
+
+            <div id="fap-preview-chronos-anchor">
+              <div id="fap-chronos-toolbar" class="fap-chronos-toolbar">
+                <label class="fap-chronos-toggle">
+                  <input type="checkbox" id="fap-chronos-show-empty" />
+                  Hiện các slot chỉ có dấu (-)
+                </label>
+              </div>
+              <div class="fap-chronos-scroll">
+                <table class="fap-chronos-schedule" data-fap-chronos="1" aria-label="Lịch tuần (preview)">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" scope="col">
+                        <strong>Year</strong>
+                        <select id="ctl00_mainContent_drpYear" aria-label="Năm học">
+                            <option value="2025">2025</option>
+                            <option selected value="2026">2026</option>
+                        </select>
+                        <br />
+                        Week
+                        <select id="ctl00_mainContent_drpSelectWeek" aria-label="Tuần">
+                          <option selected value="13">23/03 To 29/03</option>
+                          <option value="14">30/03 To 05/04</option>
+                        </select>
+                      </th>
+                      <th align="center">Mon</th>
+                      <th align="center">Tue</th>
+                      <th align="center">Wed</th>
+                      <th align="center">Thu</th>
+                      <th align="center">Fri</th>
+                      <th align="center">Sat</th>
+                      <th align="center">Sun</th>
+                    </tr>
+                    <tr>
+                      <th align="center">23/03</th>
+                      <th align="center">24/03</th>
+                      <th align="center">25/03</th>
+                      <th align="center">26/03</th>
+                      <th align="center">27/03</th>
+                      <th align="center">28/03</th>
+                      <th align="center">29/03</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="fap-chronos-row-all-empty">
+                      <td>Slot 1</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                    </tr>
+                    <tr class="fap-chronos-row-all-empty">
+                      <td>Slot 2</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                    </tr>
+                    <tr>
+                      <td>Slot 3</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-filled fap-chronos-live">
+                        <div class="fap-chronos-card" data-fap-subject-code="MLN131" tabindex="0">
+                          <div class="fap-chronos-card__body">
+                            <div class="fap-chronos-card__room-block">
+                              <div class="fap-chronos-card__line fap-chronos-card__line--room-primary">NVH 302</div>
+                              <div class="fap-chronos-card__line fap-chronos-card__line--room-sub">
+                                Nhà văn hóa sinh viên
+                              </div>
+                            </div>
+                            <div class="fap-chronos-card__code-time-row">
+                              <div class="fap-chronos-card__line fap-chronos-card__line--code" title="Chủ nghĩa xã hội khoa học">
+                                MLN131
+                              </div>
+                              <div class="fap-chronos-card__line fap-chronos-card__line--time">12:30 – 14:45</div>
+                            </div>
+                            <div class="fap-chronos-card__status">
+                              <span class="fap-chronos-status fap-chronos-status--attended">Đã tham gia</span>
+                              <div
+                                class="fap-chronos-card__progress-slot"
+                                title="9 có mặt / 15 buổi đã diễn ra (không tính Future)"
+                              >
+                                <div class="fap-chronos-progress-track">
+                                  <div class="fap-chronos-progress-fill" style="width: 60%"></div>
+                                </div>
+                                <span class="fap-chronos-progress-cap">9/15 • 60%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="fap-chronos-card__peek" aria-hidden="true">···</span>
+                          <div class="fap-chronos-card__popover" role="group" aria-label="Liên kết nhanh">
+                            <div class="fap-chronos-card__popover-inner">
+                              <a class="fap-chronos-popover__link" href="#">Chi tiết</a>
+                              <a
+                                class="fap-chronos-popover__link"
+                                href="https://flm.fpt.edu.vn/gui/role/student/SyllabusManagement"
+                                target="_blank"
+                                rel="noopener"
+                                >Tài liệu</a
+                              >
+                              <a class="fap-chronos-popover__link" href="#">EduNext</a>
+                            </div>
+                          </div>
+                          <p class="fap-chronos-raw" hidden>
+                            <a href="../Schedule/ActivityDetail.aspx?id=1832123">MLN131-</a>
+                            <span class="label label-success">(12:30-14:45)</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-filled">
+                        <div class="fap-chronos-card" data-fap-subject-code="MLN131" tabindex="0">
+                          <div class="fap-chronos-card__body">
+                            <div class="fap-chronos-card__room-block">
+                              <div class="fap-chronos-card__line fap-chronos-card__line--room-primary">NVH 302</div>
+                              <div class="fap-chronos-card__line fap-chronos-card__line--room-sub">NVHSV</div>
+                            </div>
+                            <div class="fap-chronos-card__code-time-row">
+                              <div class="fap-chronos-card__line fap-chronos-card__line--code" title="Chủ nghĩa xã hội khoa học">
+                                MLN131
+                              </div>
+                              <div class="fap-chronos-card__line fap-chronos-card__line--time">12:30 – 14:45</div>
+                            </div>
+                            <div class="fap-chronos-card__status">
+                              <span class="fap-chronos-status fap-chronos-status--attended">Đã tham gia</span>
+                              <div class="fap-chronos-card__progress-slot">
+                                <div class="fap-chronos-progress-track">
+                                  <div class="fap-chronos-progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span class="fap-chronos-progress-cap">—</span>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="fap-chronos-card__peek" aria-hidden="true">···</span>
+                          <div class="fap-chronos-card__popover" role="group" aria-label="Liên kết nhanh">
+                            <div class="fap-chronos-card__popover-inner">
+                              <a class="fap-chronos-popover__link" href="#">Chi tiết</a>
+                              <a
+                                class="fap-chronos-popover__link"
+                                href="https://flm.fpt.edu.vn/gui/role/student/SyllabusManagement"
+                                target="_blank"
+                                rel="noopener"
+                                >Tài liệu</a
+                              >
+                              <a class="fap-chronos-popover__link" href="#">EduNext</a>
+                            </div>
+                          </div>
+                          <p class="fap-chronos-raw" hidden>
+                            <a href="../Schedule/ActivityDetail.aspx?id=1832124">MLN131-</a>
+                            <span class="label label-success">(12:30-14:45)</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                    </tr>
+                    <tr class="fap-chronos-row-all-empty">
+                      <td>Slot 4</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                    </tr>
+                    <tr>
+                      <td>Slot 5</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-filled">
+                        <div class="fap-chronos-card" data-fap-subject-code="SEP490" tabindex="0">
+                          <div class="fap-chronos-card__body">
+                            <div class="fap-chronos-card__room-block">
+                              <div class="fap-chronos-card__line fap-chronos-card__line--room-primary">P.313</div>
+                            </div>
+                            <div class="fap-chronos-card__code-time-row">
+                              <div class="fap-chronos-card__line fap-chronos-card__line--code" title="Đồ án tốt nghiệp">
+                                SEP490
+                              </div>
+                              <div class="fap-chronos-card__line fap-chronos-card__line--time">17:45 – 20:00</div>
+                            </div>
+                            <div class="fap-chronos-card__status">
+                              <span class="fap-chronos-status fap-chronos-status--attended">Đã tham gia</span>
+                              <div
+                                class="fap-chronos-card__progress-slot"
+                                title="8 có mặt / 15 buổi đã diễn ra (không tính Future)"
+                              >
+                                <div class="fap-chronos-progress-track">
+                                  <div class="fap-chronos-progress-fill" style="width: 53%"></div>
+                                </div>
+                                <span class="fap-chronos-progress-cap">8/15 • 53%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="fap-chronos-card__peek" aria-hidden="true">···</span>
+                          <div class="fap-chronos-card__popover" role="group" aria-label="Liên kết nhanh">
+                            <div class="fap-chronos-card__popover-inner">
+                              <a class="fap-chronos-popover__link" href="#">Chi tiết</a>
+                              <a
+                                class="fap-chronos-popover__link"
+                                href="https://flm.fpt.edu.vn/gui/role/student/SyllabusManagement"
+                                target="_blank"
+                                rel="noopener"
+                                >Tài liệu</a
+                              >
+                              <a class="fap-chronos-popover__link" href="#">EduNext</a>
+                            </div>
+                          </div>
+                          <p class="fap-chronos-raw" hidden>
+                            <a href="#">SEP490-</a>
+                            <span class="label label-success">(17:45-20:00)</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                      <td class="fap-chronos-slot-empty">-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <section class="fap-chronos-exam-section" aria-label="Lịch thi (preview)">
+              <div class="fap-chronos-exam-sheet">
+                <h3 class="fap-chronos-exam-heading">Lịch thi</h3>
+                <div class="fap-chronos-exam-scroll">
+                  <table class="fap-chronos-exam-table">
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>Mã môn</th>
+                      <th>Tên môn</th>
+                      <th>Ngày thi</th>
+                      <th>Phòng</th>
+                      <th>Giờ</th>
+                      <th>Hình thức</th>
+                      <th>Loại thi</th>
+                      <th>Ngày công bố</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>MLN131</td>
+                      <td>Chủ nghĩa xã hội khoa học</td>
+                      <td>31/03/2026</td>
+                      <td>225</td>
+                      <td>10h50–12h20</td>
+                      <td>Trắc nghiệm</td>
+                      <td>FE</td>
+                      <td>09/04/2026</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>MLN131</td>
+                      <td>Chủ nghĩa xã hội khoa học</td>
+                      <td>11/04/2026</td>
+                      <td>—</td>
+                      <td>10h50–12h20</td>
+                      <td>Trắc nghiệm</td>
+                      <td>2NDFE</td>
+                      <td>14/04/2026</td>
+                    </tr>
+                  </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="box fap-notice-panel fap-skin-reveal fap-skin-reveal--visible">
+            <h3 class="orangeTitle">Thông báo hạn nộp thủ tục</h3>
+            <div class="listBoxWrapper">
+              <table class="table table-bordered fap-notice-table">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <span class="fap-notice-th-en">Type of procedure</span>
+                      <span class="fap-notice-th-vi">Loại thủ tục</span>
+                    </th>
+                    <th scope="col">
+                      <span class="fap-notice-th-en">Deadline</span>
+                      <span class="fap-notice-th-vi">Hạn nộp đơn</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1. Chuyển ngành</td><td>5 tuần trước học kỳ mới</td></tr>
+                  <tr><td>2. Chuyển cơ sở</td><td>5 tuần trước học kỳ mới</td></tr>
+                  <tr><td>3. Nhập học trở lại</td><td>10 ngày trước học kỳ mới</td></tr>
+                  <tr><td>4. Bảo lưu học kỳ</td><td>1 tuần trước học kỳ mới</td></tr>
+                  <tr><td>5. Tạm ngưng tiến độ 1 học kỳ để học lại</td><td>1 tuần trước học kỳ mới</td></tr>
+                  <tr><td>6. Tạm ngừng môn</td><td>1 tuần trước học kỳ mới</td></tr>
+                  <tr><td>7. Đăng ký học lại</td><td>1 tuần trước học kỳ mới</td></tr>
+                  <tr><td>8. Đăng ký học đã chậm kỳ</td><td>1 tuần trước học kỳ mới</td></tr>
+                  <tr><td>9. Đăng ký học cải thiện</td><td>1 tuần trước học kỳ mới</td></tr>
+                  <tr><td>10. Chuyển lớp</td><td>1 tuần trước học kỳ mới</td></tr>
+                  <tr><td>11. Thôi học tự nguyện</td><td>1 tuần trước học kỳ mới</td></tr>
+                  <tr><td>12. Thi cải thiện điểm</td><td>12 giờ trưa ngày trước ngày thi lại</td></tr>
+                  <tr><td>13. Phúc tra</td><td>3 ngày sau ngày công bố kết quả</td></tr>
+                  <tr><td>14. Miễn điểm danh</td><td>Trước khi học kỳ bắt đầu</td></tr>
+                  <tr>
+                    <td>15. Nộp học phí chuyên ngành</td>
+                    <td>5 ngày làm việc trước học kỳ mới (không tính thứ Bảy, Chủ nhật)</td>
+                  </tr>
+                  <tr>
+                    <td>16. Nộp học phí Tiếng Anh dự bị</td>
+                    <td>3 ngày làm việc trước khi bắt đầu khóa học (không tính thứ Bảy, Chủ nhật)</td>
+                  </tr>
+                  <tr>
+                    <td>17. Đăng ký thi thẩm định các môn học trực tuyến</td>
+                    <td>12h thứ Sáu tuần thứ 9 của học kỳ</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <p class="fap-preview-footnote">
+      Preview nạp <code>fap-minimal.css</code> — không chạy <code>content.js</code>. Khối <strong>View Schedule</strong>
+      là HTML tĩnh giống DOM sau Chronos; lịch thi nhúng là bản mẫu (trên FAP thật được fetch từ
+      <code>Exam/ScheduleExams.aspx</code>). Các khối khác: lối tắt và mosaic do tay; trang thật do FAP tải động nên có
+      thể lệch nhẹ.
+    </p>
+
+    <script>
+      (function () {
+        var box = document.querySelector("[data-fap-mosaic]");
+        var filter = document.getElementById("fap-acad-filter");
+
+        function applyFilter(raw) {
+          var q = String(raw || "")
+            .trim()
+            .toLowerCase();
+          box.querySelectorAll(".fap-dash-tile").forEach(function (td) {
+            var any = false;
+            td.querySelectorAll(".fap-dash-li").forEach(function (li) {
+              var show = !q || li.textContent.toLowerCase().indexOf(q) !== -1;
+              li.style.display = show ? "" : "none";
+              if (show) any = true;
+            });
+            td.hidden = q.length > 0 && !any;
+            if (q.length > 0 && any) {
+              var shell = td.querySelector(".fap-dash-tile-shell");
+              if (shell && shell.classList.contains("fap-dash-collapsed")) {
+                shell.classList.remove("fap-dash-collapsed");
+                var b = shell.querySelector(".fap-dash-toggle");
+                if (b) {
+                  b.textContent = "Thu gọn";
+                  b.setAttribute("aria-expanded", "true");
+                }
+              }
+            }
+          });
+        }
+
+        function syncToggle(btn, shell) {
+          var collapsed = shell.classList.contains("fap-dash-collapsed");
+          btn.textContent = collapsed ? "Mở rộng" : "Thu gọn";
+          btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+        }
+
+        box.querySelectorAll(".fap-dash-tile-shell").forEach(function (shell) {
+          var btn = shell.querySelector(".fap-dash-toggle");
+          if (!btn) return;
+          btn.addEventListener("click", function () {
+            shell.classList.toggle("fap-dash-collapsed");
+            syncToggle(btn, shell);
+          });
+        });
+
+        filter.addEventListener("input", function () {
+          applyFilter(filter.value);
+        });
+        filter.addEventListener("search", function () {
+          applyFilter(filter.value);
+        });
+
+        document.getElementById("fap-acad-expand-all").addEventListener("click", function () {
+          box.querySelectorAll(".fap-dash-tile-shell").forEach(function (shell) {
+            shell.classList.remove("fap-dash-collapsed");
+            var b = shell.querySelector(".fap-dash-toggle");
+            if (b) syncToggle(b, shell);
+          });
+          box.querySelectorAll(".fap-dash-tile").forEach(function (td) {
+            td.hidden = false;
+          });
+          applyFilter(filter.value);
+        });
+
+        document.getElementById("fap-acad-collapse-all").addEventListener("click", function () {
+          box.querySelectorAll(".fap-dash-tile-shell").forEach(function (shell) {
+            shell.classList.add("fap-dash-collapsed");
+            var b = shell.querySelector(".fap-dash-toggle");
+            if (b) syncToggle(b, shell);
+          });
+        });
+
+        document.addEventListener(
+          "mouseover",
+          function (e) {
+            var a = e.target.closest && e.target.closest("a[href]");
+            if (!a) return;
+            var hint = document.getElementById("fap-link-hint");
+            var urlEl = hint.querySelector(".fap-link-hint-url");
+            urlEl.textContent = a.getAttribute("href") || "";
+            hint.classList.add("fap-link-hint--active");
+            hint.setAttribute("aria-hidden", "false");
+          },
+          true
+        );
+        document.addEventListener(
+          "mouseout",
+          function (e) {
+            var from = e.target.closest && e.target.closest("a[href]");
+            if (!from) return;
+            var hint = document.getElementById("fap-link-hint");
+            hint.classList.remove("fap-link-hint--active");
+            hint.setAttribute("aria-hidden", "true");
+            hint.querySelector(".fap-link-hint-url").textContent = "";
+          },
+          true
+        );
+
+        var chEmpty = document.getElementById("fap-chronos-show-empty");
+        if (chEmpty) {
+          chEmpty.addEventListener("change", function () {
+            document.body.classList.toggle("fap-chronos-show-dead-rows", chEmpty.checked);
+          });
+        }
+      })();
+    </script>
+
+    <style>
+      .fap-preview-footnote {
+        max-width: 72rem;
+        margin: 24px auto 48px;
+        padding: 0 20px;
+        font-family: var(--fap-font-sans, system-ui, sans-serif);
+        font-size: 13px;
+        color: var(--fap-muted, #787774);
+        line-height: 1.5;
+      }
+      .fap-preview-footnote code {
+        font-family: var(--fap-font-mono, monospace);
+        font-size: 12px;
+      }
+    </style>
+  </body>
+</html>

@@ -35,4 +35,4 @@ We may update this policy in future releases. Any update will be published on th
 
 If you have questions about this privacy policy, contact:
 
-- Email: `your-email@example.com`
+- Email: `maitanthepmrthep@gmail.com`

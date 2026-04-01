@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "FAP Minimal Skin",
-  "version": "1.17.4",
-  "description": "Warm minimal theme for FPT Academic Portal (fap.fpt.edu.vn). Stores only your theme preference locally — no personal data is collected or transmitted.",
+  "version": "1.17.5",
+  "description": "Minimal theme for FPT Academic Portal. Saves theme locally only. No personal data is transmitted.",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

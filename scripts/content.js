@@ -1,6 +1,8 @@
 const SKIN_CLASS = "fap-minimal-skin";
 const STORAGE_KEY = "fapMinimalSkinEnabled";
 const LINK_HINT_ID = "fap-link-hint";
+const ANIME_SPLINE_WRAPPER_ID = "fap-anime-spline-wrap";
+const ANIME_SPLINE_IFRAME_SRC = "https://my.spline.design/chibimiku-qAHLDeyTKstVZb7xLHigNvFG/";
 
 /** Nút "Tài liệu" trên Chronos: luôn mở trang quản lý syllabus SV (FLM). */
 const FLM_STUDENT_SYLLABUS_URL = "https://flm.fpt.edu.vn/gui/role/student/SyllabusManagement";
@@ -1359,6 +1361,96 @@ function injectQuickStrip() {
   }
 }
 
+function injectAnimeSplineStage() {
+  if (document.getElementById(ANIME_SPLINE_WRAPPER_ID)) {
+    return;
+  }
+  const main = document.getElementById("ctl00_mainContent_divMain");
+  if (!main) {
+    return;
+  }
+
+  const section = document.createElement("section");
+  section.id = ANIME_SPLINE_WRAPPER_ID;
+  section.className = "box fap-anime-stage";
+  section.setAttribute("aria-label", "Không gian anime");
+
+  const title = document.createElement("h3");
+  title.className = "orangeTitle";
+  title.textContent = "Anime Scene";
+
+  const shell = document.createElement("div");
+  shell.className = "fap-anime-stage__shell";
+
+  const status = document.createElement("p");
+  status.className = "fap-anime-stage__status";
+  status.textContent = "Đang tải không gian anime...";
+
+  const frameWrap = document.createElement("div");
+  frameWrap.className = "fap-anime-stage__frame-wrap";
+
+  const frame = document.createElement("iframe");
+  frame.className = "fap-anime-stage__frame";
+  frame.src = ANIME_SPLINE_IFRAME_SRC;
+  frame.title = "Anime 3D scene";
+  frame.loading = "lazy";
+  frame.referrerPolicy = "strict-origin-when-cross-origin";
+  frame.setAttribute("allow", "autoplay; fullscreen");
+
+  const actions = document.createElement("div");
+  actions.className = "fap-anime-stage__actions";
+
+  const open = document.createElement("a");
+  open.href = ANIME_SPLINE_IFRAME_SRC;
+  open.target = "_blank";
+  open.rel = "noopener noreferrer";
+  open.className = "fap-anime-stage__open";
+  open.textContent = "Mở scene tab mới";
+  actions.appendChild(open);
+
+  let done = false;
+  const markDone = () => {
+    if (done) {
+      return;
+    }
+    done = true;
+    status.textContent = "Scene anime đã sẵn sàng.";
+  };
+  const markError = () => {
+    if (done) {
+      return;
+    }
+    done = true;
+    status.textContent = "Không tải được scene. Kiểm tra mạng hoặc mở bằng nút bên dưới.";
+    status.classList.add("fap-anime-stage__status--warn");
+  };
+
+  const watchdog = window.setTimeout(() => {
+    markError();
+  }, 10000);
+  frame.addEventListener("load", () => {
+    window.clearTimeout(watchdog);
+    markDone();
+  });
+  frame.addEventListener("error", () => {
+    window.clearTimeout(watchdog);
+    markError();
+  });
+
+  frameWrap.appendChild(frame);
+  shell.appendChild(status);
+  shell.appendChild(frameWrap);
+  shell.appendChild(actions);
+  section.appendChild(title);
+  section.appendChild(shell);
+
+  main.insertBefore(section, main.firstChild);
+}
+
+function teardownAnimeSplineStage() {
+  document.getElementById(ANIME_SPLINE_WRAPPER_ID)?.remove();
+}
+
 function rewriteNoticeTableBodyVi(table) {
   table.classList.add("fap-notice-table");
 
@@ -2124,10 +2216,12 @@ function applySkin(enabled) {
       restoreStudentHeadings();
       restoreImportantNoticePosition();
       document.getElementById("fap-quick-strip")?.remove();
+      teardownAnimeSplineStage();
     }
     refreshDomRemodel(enabled);
     if (enabled) {
       injectQuickStrip();
+      injectAnimeSplineStage();
       localizeStudentHeadings();
       moveImportantNoticeToBottom();
       enhanceScheduleChronos();

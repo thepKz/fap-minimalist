@@ -2,6 +2,10 @@
 
 Extension Chrome (Manifest V3) giao diện tối giản / industrial cho [FPT Academic Portal](https://fap.fpt.edu.vn).
 
+## Privacy Policy
+
+- Xem tại: `PRIVACY_POLICY.md`
+
 ## Tính năng (khi bật theme)
 
 ### Giao diện chung
